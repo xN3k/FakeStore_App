@@ -37,6 +37,14 @@ dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.7.0
   flutter_secure_storage: ^9.2.2
+  equatable: ^2.0.5
+  authentication_repository:
+    path: packages/authentication_repository
+  flutter_bloc: ^8.1.6
+  user_repository:
+    path: packages/user_repository
+  formz: ^0.7.0
+  bloc: ^8.1.4
 
 dev_dependencies:
   flutter_test:

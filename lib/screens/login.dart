@@ -44,10 +44,10 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login Test'),
+        title: const Text('Login'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16),
         child: Form(
           key: _formKey,
           child: Column(
@@ -56,7 +56,8 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               TextFormField(
                 decoration: const InputDecoration(
-                  labelText: 'Username',
+                  hintText: 'Username',
+                  border: OutlineInputBorder(),
                 ),
                 controller: _username,
                 validator: (value) {
@@ -66,9 +67,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   return null;
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
               TextFormField(
                 decoration: const InputDecoration(
-                  labelText: 'Password',
+                  hintText: 'Password',
+                  border: OutlineInputBorder(),
                 ),
                 controller: _password,
                 validator: (value) {

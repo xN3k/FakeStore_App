@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class LoginService {
@@ -22,8 +23,8 @@ class LoginService {
         return true;
       }
       return false;
-    } catch (e) {
-      print(e);
+    } on DioException catch (e) {
+      debugPrint('$e');
       return false;
     }
   }
